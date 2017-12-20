@@ -10,8 +10,8 @@
         "title": "Fullstack React",
         "project": "Learning",
         "id": "94ed444e-e4db-43fb-9c9c-8830676dc496",
-        "elapsed": 0,
-        "runningSince": 1513790747081
+        "elapsed": 8799661,
+        "runningSince": 1513799549924
     },
     {
         "title": "Work ",
@@ -38,6 +38,13 @@
         "title": "Workout",
         "project": "Workout",
         "id": "9707eaf6-1fb0-41f9-b6d2-e88f214045bf",
+        "elapsed": 0,
+        "runningSince": null
+    },
+    {
+        "title": "Lunch",
+        "project": "Lunch",
+        "id": "151a7324-b254-4b89-944d-e39af915ff12",
         "elapsed": 0,
         "runningSince": null
     }

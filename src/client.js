@@ -1,7 +1,7 @@
 
 
   export function getTimers(success) {
-    return fetch('http://localhost:3000/api/timers', {
+    return fetch('http://localhost:7000/api/timers', {
       headers: {
         Accept: 'application/json',
       },
@@ -11,7 +11,7 @@
   }
 
   export function resetAll(success) {
-        return fetch('http://localhost:3000/api/timers/resetAll',{
+        return fetch('http://localhost:7000/api/timers/resetAll',{
             headers:{
                 Accept:'application/json'
             },
@@ -21,7 +21,7 @@
     }
 
   export function createTimer(data) {
-    return fetch('http://localhost:3000/api/timers', {
+    return fetch('http://localhost:7000/api/timers', {
       method: 'post',
       body: JSON.stringify(data),
       headers: {
@@ -32,7 +32,7 @@
   }
 
   export function updateTimer(data) {
-    return fetch('http://localhost:3000/api/timers', {
+    return fetch('http://localhost:7000/api/timers', {
       method: 'put',
       body: JSON.stringify(data),
       headers: {
@@ -43,7 +43,7 @@
   }
 
   export function deleteTimer(data) {
-    return fetch('http://localhost:3000/api/timers', {
+    return fetch('http://localhost:7000/api/timers', {
       method: 'delete',
       body: JSON.stringify(data),
       headers: {
@@ -56,7 +56,7 @@
 
 
   export function startTimer(data) {
-    return fetch('http://localhost:3000/api/timers/start', {
+    return fetch('http://localhost:7000/api/timers/start', {
       method: 'post',
       body: JSON.stringify(data),
       headers: {
@@ -67,7 +67,7 @@
   }
 
   export function stopTimer(data) {
-    return fetch('http://localhost:3000/api/timers/stop', {
+    return fetch('http://localhost:7000/api/timers/stop', {
       method: 'post',
       body: JSON.stringify(data),
       headers: {
@@ -81,12 +81,12 @@
     if (response.status >= 200 && response.status < 300) {
       return response;
     } else {
-      //const error = new Error(`HTTP Error ${response.statusText}`);
-      // error.status = response.statusText;
-      // error.response = response;
-      // console.log(error);
-      // throw error;
-        console.log("error");
+      const error = new Error(`HTTP Error ${response.statusText}`);
+      error.status = response.statusText;
+      error.response = response;
+      console.log(error);
+      throw error;
+
     }
   }
 

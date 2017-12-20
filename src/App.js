@@ -146,7 +146,7 @@ class App extends React.Component{
         return (
             <div>
 
-                <div className={'ui three column centered grid'}>
+                <div>
                     <EditableTimerList timers={this.state.timers} onFormSubmit={this.handleFormUpdate}
                                        onHandleTrashClick={this.handleTrashClick}
                                        onStartClick={this.handleStartClick}
@@ -191,7 +191,7 @@ class EditableTimerList extends React.Component{
 
         return(
 
-            <div>
+            <div className={'ui four cards'}>
                 {timers}
             </div>
         )
